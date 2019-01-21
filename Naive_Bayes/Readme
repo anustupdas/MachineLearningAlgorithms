@@ -1,0 +1,10 @@
+How to use the Program:
+
+Go to CMD.
+Traverse to the path where the Jar file and the data file is kept.
+
+ Run the follow command: 
+ 
+java -jar NaiveBayes.jar cardata.txt 
+ 
+[note:] cardata.txt should be in the same directory as NaiveBayes.jar file
