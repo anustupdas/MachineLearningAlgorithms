@@ -1,0 +1,31 @@
+In order to run the program, two files need to be provided. the program automatically will get the file once the files are kept in correct directory.
+1. car.properties
+2. car.data
+
+car.properties located along with the .java files in src folder, that contains the attributes, class and attribute values. ex:
+
+attributes = buying, maint, doors, persons, lug_boot, safety
+categories = unacc, acc, good, vgood
+
+buying	 = vhigh, high, med, low
+maint	 = vhigh, high, med, low
+doors	 = 2, 3, 4, 5more
+persons	 = 2, 4, more
+lug_boot = small, med, big
+safety	 = low, med, high
+
+car.data located in the /project_folder/data/ directory. this file contains the data on which the ID3 algorithm should be learned to classify.
+
+Algorithm: 
+
+There are three steps to the algorithm:
+Step 1: If all instances in C belongs to one class, then create node that belongs to that class and halt.
+Otherwise select a feature, F with values v1, ..., vn and create a decision node.
+
+Step 2: Partition the training instances in C into subsets C1, C2, ..., Cn according to the values of V.
+
+Step 3: apply the algorithm recursively to each of the sets Ci.
+
+Discussion:
+-- The distribution of the examples in each node is such that it contains examples of the single class. Also there were no missing attributes. It is possible to classify future instances on the basis of the decision tree found. However, in the real world scenario there might be possibility of new attributes or categories. That time it might be a problematic to fit new instances on the model.
+Currently all the data's are used to build the model hence with the current data set the tree built will lead to perfect solution, however if there were test data's to check the goodness of the model than it would be possible to find if the solution to classify was good or not.
